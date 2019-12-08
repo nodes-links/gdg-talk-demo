@@ -1,3 +1,11 @@
+# Prerequisites
+
+- Get an AWS account
+- Install & configure the AWS CLI
+- Install the AWS CDK CLI
+
+    ```npm install -g aws-cdk@1.17.1```
+
 # Useful commands
 
  * `npm run build`   compile typescript to js
