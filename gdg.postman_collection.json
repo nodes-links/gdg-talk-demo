@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "2d4ad368-edf3-4f97-97ab-8c078509b9cb",
+		"name": "gdg",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "post item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://{{api_key}}.execute-api.eu-west-1.amazonaws.com/prod/items/item6",
+					"protocol": "https",
+					"host": [
+						"{{api_key}}",
+						"execute-api",
+						"eu-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"items",
+						"item6"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{api_key}}.execute-api.eu-west-1.amazonaws.com/prod/items",
+					"protocol": "https",
+					"host": [
+						"{{api_key}}",
+						"execute-api",
+						"eu-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "start task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://{{api_key}}.execute-api.eu-west-1.amazonaws.com/prod/task",
+					"protocol": "https",
+					"host": [
+						"{{api_key}}",
+						"execute-api",
+						"eu-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"task"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
