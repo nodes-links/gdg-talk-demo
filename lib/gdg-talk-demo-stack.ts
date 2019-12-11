@@ -15,6 +15,8 @@ export class GdgTalkDemoStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
+    /**************************************************  DEMO 1  **************************************************/
+    
     // Create a DynamoDB table
 
     const primaryKey = "itemId";
@@ -26,6 +28,8 @@ export class GdgTalkDemoStack extends cdk.Stack {
       tableName: "items",
       removalPolicy: cdk.RemovalPolicy.DESTROY
     });
+
+    /**************************************************  DEMO 2  **************************************************/
 
     // Create two Lambda functions to interact with the table
 
@@ -44,6 +48,8 @@ export class GdgTalkDemoStack extends cdk.Stack {
     dynamoTable.grantWriteData(dynamoPost);
     dynamoTable.grantReadData(dynamoGet);
 
+    /**************************************************  DEMO 3  **************************************************/
+
     // Create a REST API and define the necessary paths/resources
 
     const api = new RestApi(this, "itemsApi", {
@@ -58,6 +64,8 @@ export class GdgTalkDemoStack extends cdk.Stack {
 
     items.addMethod("GET", new LambdaIntegration(dynamoGet));
     itemId.addMethod("POST", new LambdaIntegration(dynamoPost));
+
+    /**************************************************  DEMO 4  **************************************************/
 
     // Create a Lambda function responsible for starting a containerized task
 
